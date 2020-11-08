@@ -1,1 +1,5 @@
 iob-device/.azurecomponent/azureconfig.json
+bin
+obj
+local.settings.json
+.vscode
