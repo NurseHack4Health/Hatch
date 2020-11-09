@@ -25,7 +25,7 @@ jobs:
         with:
           find: "REPLACE_W_SIGNALR_TOKEN_URL"
           replace: "${{ secrets.SIGNALR_TOKEN_URL }}"
-          include: "environment.prod.ts"
+          include: "environments/"
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
