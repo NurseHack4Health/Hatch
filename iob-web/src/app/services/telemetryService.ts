@@ -17,7 +17,7 @@ export class TelemetryService {
   }
 
   private getSignalRConnection(): Observable<Connection> {
-    return this.http.get<Connection>(`${environment.baseUrl}/SignalRConnection`);
+    return this.http.get<Connection>(`${environment.SIGNALR_BASE_URL}/SignalRConnection`);
   }
 
   init() {
