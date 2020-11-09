@@ -3,4 +3,4 @@ bin
 obj
 local.settings.json
 .vscode
-environments
+iob-web/src/environments/environment.ts
