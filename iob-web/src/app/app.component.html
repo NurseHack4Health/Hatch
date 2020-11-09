@@ -1,9 +1,16 @@
-<h1>Sound Health</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
+<nav class="navbar is-primary">
+  <!-- logo -->
+  <div class="navbar-brand">
+      <a class="navbar-item">
+      <span class="navbar-logo"></span> Sound Health
+      </a>
+  </div>
+
   <ul>
     <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
   </ul>
+
 </nav>
+
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>

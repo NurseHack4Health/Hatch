@@ -10,14 +10,14 @@ import * as SignalR from '@aspnet/signalr';
 })
 
 export class TelemetryService {
-  mxChipData: Subject<string> = new Subject();
+  telemetry: Subject<string> = new Subject();
   private hubConnection: SignalR.HubConnection;
 
   constructor(private http: HttpClient) {
   }
 
   private getSignalRConnection(): Observable<Connection> {
-    return this.http.get<Connection>(`${environment.baseUrl}/SignalRConnection`);
+    return this.http.get<Connection>(`${environment.SIGNALR_TOKEN_URL}`);
   }
 
   init() {
@@ -34,7 +34,7 @@ export class TelemetryService {
       this.hubConnection.start().catch(error => console.error(error));
 
       this.hubConnection.on('notify', data => {
-        this.mxChipData.next(data);
+        this.telemetry.next(data);
       });
     });
   }

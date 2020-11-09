@@ -11,12 +11,12 @@ export class DashboardComponent implements OnInit {
 
   telemetry: Telemetry = new Telemetry();
 
-  constructor(private signalRService: TelemetryService) {
+  constructor(private telemetryService: TelemetryService) {
   }
 
   ngOnInit() {
-    this.signalRService.init();
-    this.signalRService.mxChipData.subscribe(data => {
+    this.telemetryService.init();
+    this.telemetryService.telemetry.subscribe(data => {
       this.telemetry = JSON.parse(data);
       console.log(data);
     });
