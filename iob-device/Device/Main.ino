@@ -266,7 +266,7 @@ void loop()
       {
         // Update display
         char buff[128];
-        sprintf(buff, "ID: %s \r\n Temp:%s°C    \r\n Humidity:%s%% \r\n Pres:%smb         \r\n", device_id, f2s(*(newValues), 1), f2s(*(newValues + 1), 1), f2s(*(newValues + 2), 1));
+        sprintf(buff, "ID: %s \r\n Temp:%s°C    \r\n Humidity:%s%% \r\n Decibels:%smb         \r\n", device_id, f2s(*(newValues), 1), f2s(*(newValues + 1), 1), f2s(decibels, 1));
         Screen.print(buff);
       }
 

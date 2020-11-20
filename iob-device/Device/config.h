@@ -4,7 +4,7 @@
 // Interval time(ms) for sending message to IoT Hub
 #define INTERVAL 1000
 
-#define MESSAGE_MAX_LEN 256
+#define MESSAGE_MAX_LEN 400
 
 #define TEMPERATURE_ALERT 30
 
